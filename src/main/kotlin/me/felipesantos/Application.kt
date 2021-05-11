@@ -44,10 +44,76 @@ fun main(){
     else if (2 >= 3){
         resultado = true
     }
-    else{
-        resultado = false
-    }
 
     println(resultado.toString())
 
+
+    //atribuição kotlin way
+    var numero = 10
+    var saida: String
+
+    saida = if(numero % 2 == 0){
+        "$numero é par"
+    }
+    else {
+        "$numero é impar"
+    }
+    
+    println(saida)
+
+    //when
+    val idade = 10
+
+    val result = when{
+        idade < 10 -> "criança"
+        idade < 30 -> "adulto"
+        else -> "idoso"
+    }
+
+    println(result)
+
+    //laços
+
+    // de um numero a outro
+    //for(i in 0 until 10)
+    //for(i in 1..10)
+
+    //de um numero a outro com passo personalizado , ex 2 em 2
+    for(i in 1..10 step 2) {
+        println(i)
+    }
+
+    //decrescente
+    for(i in 10 downTo 1){
+        println(i)
+    }
+
+    // percorrendo array
+    var lista = arrayOf("one", "two", "three")
+    for(element in lista){
+        println(element)
+    }
+
+    //pegando elemento e index do array
+    for((index, element) in lista.withIndex()){
+        println("lista[" + index + "] = " + element)
+    }
+
+    //percorrer usando forEach
+    lista.forEach { println(it) }
+
+    //while
+    var loop = 0
+
+    while(loop < 10) {
+        println(loop)
+        loop++
+    }
+
+    println(somar(10,5))
+}
+
+//funcao que soma 2 inteiros e retorna um inteiro
+fun somar(a: Int, b: Int):Int{
+    return a + b
 }
