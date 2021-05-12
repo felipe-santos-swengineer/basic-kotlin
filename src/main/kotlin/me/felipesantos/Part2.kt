@@ -16,6 +16,8 @@ fun main(){
     list_m.add(list_m.size, 10)
     println(list_m)
 
+    //lambdas
+
 
 
 }
