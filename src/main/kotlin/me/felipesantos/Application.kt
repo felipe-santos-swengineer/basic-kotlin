@@ -111,9 +111,33 @@ fun main(){
     }
 
     println(somar(10,5))
+    printSum(5, 6)
+    println(som(5, 8))
+    println(somaN(1,2,3,4,5,6,7))
+
+    //classes
+    var person = Person("Felipe", 21)
+    println(person)
 }
 
 //funcao que soma 2 inteiros e retorna um inteiro
+//com retorno
 fun somar(a: Int, b: Int):Int{
     return a + b
 }
+//sem retorno
+fun printSum(a: Int, b: Int){
+    println(a + b)
+}
+//sem corpo
+fun som(a: Int, b: Int) = a * b
+
+//com parametros variaveis
+fun somaN(vararg numbers: Int):Float{
+    if(numbers.isNotEmpty()){
+        val total_sum = numbers.sum()
+        return total_sum.toFloat()
+    }
+    return 0f
+}
+
